@@ -1,0 +1,5 @@
+# sonar-config.yaml
+sonar:
+  hostUrl: "https://sonarqube.awsbanbogota.com"
+  loginToken: "797dd4235097a4e698ca1414bdb45199cbcd88ff"
+  projectKey: "ycasall-personal-webApp"
