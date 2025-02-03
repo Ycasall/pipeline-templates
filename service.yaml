@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-personal-service
+spec:
+  selector:
+    app: website-personal  # Debe coincidir con la etiqueta en el Deployment
+  ports:
+    - protocol: TCP
+      port: 80  # El puerto al que se accederá dentro del clúster # Puerto interno del servicio
+      targetPort: 80  # El puerto en el contenedor # Puerto en el que NGINX está escuchando
+      nodePort: 30080    # El puerto que Minikube usará en la máquina local para acceder al servicio  # Puerto externo (NodePort)
+  type: NodePort  # Exponer el servicio como un NodePort
